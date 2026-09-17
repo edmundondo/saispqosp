@@ -7,6 +7,26 @@ follows [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH).
 The version number shown here matches the `<meta name="app-version">` tag in
 `index.html` and the `v{version}` badge in the page's footer.
 
+## [0.4.0] — 2026-09-17
+
+### Added
+- **Ported the full Drill-down Explorer from `zwispqosp` v0.5.0/v0.5.1** (this app is kept as a
+  byte-identical copy of zwispqosp aside from title/version/`currentSite`): a single, condensed,
+  breadcrumb-navigable Explorer replacing the previous stacked-card layouts across Provider
+  analytics (City → Area → ISP → reports, now including South Africa's real, sourced areas from
+  `saispqosd` v1.2.0), ISP licensing, Benchmark reports, Moderation and Translations.
+- **Benchmark reports now render inline** as the leaf of the same breadcrumb Explorer, instead of
+  opening in a new tab — full stat grid, 12-week QoS trend, complaint-cluster keyword tally and
+  scrollable raw-comments table, with Print/Save-as-PDF via a scoped in-page print.
+- Every Overview stat tile is now a clickable entry point into the relevant drill-down.
+
+### Fixed
+- Same rating-form truncation fix as `saispqosd` v1.2.0 (CSS grid `0fr → 1fr` expand, no fixed
+  `max-height` cap) wherever this admin app renders the same expandable-row pattern.
+
+### Notes
+- See `zwispqosp`'s CHANGELOG v0.5.0/v0.5.1 entries for the full detail this app inherits.
+
 ## [0.1.1] — 2026-09-10
 
 ### Fixed
